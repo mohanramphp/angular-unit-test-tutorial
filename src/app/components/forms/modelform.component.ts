@@ -9,7 +9,7 @@ Our test suite looks mostly the same but has a few key differences:
 */
 
 import { Component, EventEmitter, Output } from "@angular/core";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { UntypedFormBuilder, UntypedFormGroup, Validators } from "@angular/forms";
 
 
 export class User {
@@ -33,9 +33,9 @@ export class User {
 })
 export class ModelFormComponent {
     @Output() loggedIn = new EventEmitter<User>();
-    form: FormGroup;
+    form: UntypedFormGroup;
 
-    constructor(private fb: FormBuilder) {
+    constructor(private fb: UntypedFormBuilder) {
     }
 
     ngOnInit() {
