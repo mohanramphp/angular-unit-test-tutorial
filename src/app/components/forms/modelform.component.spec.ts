@@ -31,13 +31,13 @@ describe('Component: Login', () => {
     });
 
     it('email field validity', () => {
-        let email = component.form.controls['email'];
+        const email = component.form.controls['email'];
         expect(email.valid).toBeFalsy();
     });
 
     it('email field validity', () => {
         let errors = {};
-        let email = component.form.controls['email'];
+        const email = component.form.controls['email'];
         errors = email.errors || {};
         expect(errors['required']).toBeTruthy();
     });

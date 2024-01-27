@@ -32,7 +32,7 @@ describe('component Auth:', () => {
         fixture.detectChanges(); // ngOnInit triggered automatically
         const aElement: HTMLAnchorElement = el.nativeElement;
         expect(aElement.textContent.trim()).toBe('Login');
-        let spy = spyOn(authService, 'isAuthenticated').and.returnValue(Promise.resolve(true));
+        const spy = spyOn(authService, 'isAuthenticated').and.returnValue(Promise.resolve(true));
         component.ngOnInit();
         spy.calls.mostRecent().returnValue;
 

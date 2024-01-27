@@ -39,7 +39,7 @@ describe('PostService', () => {
 
         });
 
-        let req = httpMock.expectOne(postService.REST_API);
+        const req = httpMock.expectOne(postService.REST_API);
         expect(req.request.method).toBe('GET');
         req.flush(postItems);
         httpMock.verify();

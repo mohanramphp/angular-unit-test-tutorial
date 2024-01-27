@@ -11,7 +11,7 @@ import { AsyncAuthService } from "./async-auth.service";
     `
 })
 export class AsyncAuthComponent implements OnInit {
-    needsLogin: boolean = true;
+    needsLogin = true;
     constructor(private auth: AsyncAuthService) {
 
     }

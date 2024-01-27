@@ -24,7 +24,7 @@ describe('Router App', () => {
     }); // end of beforeEach
 
     it('fakeasync', fakeAsync(() => {
-        let promise = new Promise(resolve => {
+        const promise = new Promise(resolve => {
             setTimeout(resolve, 10);
         });
 

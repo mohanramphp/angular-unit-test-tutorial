@@ -15,7 +15,7 @@ function Season() { //instance function/class (component/pipe/directive)
 
 describe('spyOn demo with and.callThrough', () => {
     it('should return Winter', () => {
-        let s = new Season();
+        const s = new Season();
         spyOn(s, 'nextSession').and.callThrough();
         s.getNextSession();
         expect(s.season).toEqual('Winter');
@@ -24,7 +24,7 @@ describe('spyOn demo with and.callThrough', () => {
 
 describe('spyOn demo with and.returnValue', () => {
     it('should return Summer', () => {
-        let s = new Season();
+        const s = new Season();
         spyOn(s, 'nextSession').and.returnValue('Summer');
         // s.getNextSession();
         expect(s.nextSession()).toEqual('Summer');
@@ -36,7 +36,7 @@ describe('spyOn demo with and.returnValue', () => {
 // entire spied function using and.callFake()
 describe('spyOn demo with and.callFake()', () => {
     it('should return season', () => {
-        let s = new Season();
+        const s = new Season();
         spyOn(s, 'nextSession').and.callFake(() => {
             console.log('I am in future call');
             return 'Winter';
@@ -48,7 +48,7 @@ describe('spyOn demo with and.callFake()', () => {
 
 describe('spyOn demo with and.callFake(arg)', () => {
     it('should return season', () => {
-        let s = new Season();
+        const s = new Season();
         spyOn(s, 'nextSession').and.callFake((city) => {
             console.log('I am in future call' + city);
             return 'Winter season in ' + city;

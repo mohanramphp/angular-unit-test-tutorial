@@ -11,7 +11,7 @@ export interface Post {
 
 @Injectable({ providedIn: 'root' })
 export class PostService {
-    REST_API: string = 'https://jsonplaceholder.typicode.com/posts';
+    REST_API = 'https://jsonplaceholder.typicode.com/posts';
 
     constructor(private http: HttpClient) {
 
